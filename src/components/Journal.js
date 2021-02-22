@@ -27,6 +27,10 @@ export const Journal = () => {
 		setEntries([...entries, newEntry]);
 	};
 
+	const handleDelete = () => {
+		//todo add logic to delete entry
+	};
+
 	return (
 		<div>
 			<Container>
@@ -34,7 +38,10 @@ export const Journal = () => {
 					return <JournalEntry key={uuidv4()} entry={entry} />;
 				})}
 			</Container>
-			<JournalCreate handleSubmit={handleSubmitCreate} />
+			<JournalCreate
+				handleSubmit={handleSubmitCreate}
+				handleDelete={handleDelete}
+			/>
 		</div>
 	);
 };
