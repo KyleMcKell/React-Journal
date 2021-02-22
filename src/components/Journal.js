@@ -14,7 +14,7 @@ export const Journal = () => {
 		},
 	]);
 
-	const handleSubmit = (event) => {
+	const handleSubmitCreate = (event) => {
 		event.preventDefault();
 		console.log(event);
 		const newTitle = event.target.elements.title.value;
@@ -34,7 +34,7 @@ export const Journal = () => {
 					return <JournalEntry key={uuidv4()} entry={entry} />;
 				})}
 			</Container>
-			<JournalCreate handleSubmit={handleSubmit} />
+			<JournalCreate handleSubmit={handleSubmitCreate} />
 		</div>
 	);
 };
