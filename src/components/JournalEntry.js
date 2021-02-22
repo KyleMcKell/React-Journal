@@ -1,6 +1,6 @@
 import { Container } from "@material-ui/core";
 import React from "react";
-import { JournalDelete } from "./JournalDelete";
+import { Button } from "@material-ui/core";
 
 export const JournalEntry = ({ entry, handleDelete }) => {
 	const title = entry.title;
@@ -12,7 +12,7 @@ export const JournalEntry = ({ entry, handleDelete }) => {
 			<h1>{title}</h1>
 			<h2>{date}</h2>
 			<p>{entryText}</p>
-			<JournalDelete handleDelete={handleDelete} />
+			<Button onClick={() => handleDelete(entry)}>Delete</Button>
 		</Container>
 	);
 };

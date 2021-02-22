@@ -27,21 +27,25 @@ export const Journal = () => {
 		setEntries([...entries, newEntry]);
 	};
 
-	const handleDelete = () => {
+	const handleDelete = (entry) => {
 		//todo add logic to delete entry
+		setEntries(entries.filter((e) => e !== entry));
 	};
 
 	return (
 		<div>
 			<Container>
 				{entries.map((entry) => {
-					return <JournalEntry key={uuidv4()} entry={entry} />;
+					return (
+						<JournalEntry
+							key={uuidv4()}
+							entry={entry}
+							handleDelete={handleDelete}
+						/>
+					);
 				})}
 			</Container>
-			<JournalCreate
-				handleSubmit={handleSubmitCreate}
-				handleDelete={handleDelete}
-			/>
+			<JournalCreate handleSubmit={handleSubmitCreate} />
 		</div>
 	);
 };
