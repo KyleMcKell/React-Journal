@@ -16,7 +16,6 @@ export const Journal = () => {
 
 	const handleSubmitCreate = (event) => {
 		event.preventDefault();
-		console.log(event);
 		const newTitle = event.target.elements.title.value;
 		const newEntryText = event.target.elements.entryText.value;
 		const newEntry = {
@@ -28,7 +27,6 @@ export const Journal = () => {
 	};
 
 	const handleDelete = (entry) => {
-		//todo add logic to delete entry
 		setEntries(entries.filter((e) => e !== entry));
 	};
 
