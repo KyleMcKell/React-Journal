@@ -8,14 +8,9 @@ import { useLocalStorageState } from "../utils/useLocalStorageState";
 export const Journal = () => {
 	const [entries, setEntries] = useLocalStorageState("journal-entries", [
 		{
-			title: "hi, this is a title",
-			date: "January 1 2021",
-			entryText: "Today I wrote a journal",
-		},
-		{
-			title: "this is a second entry",
-			date: "January 3 2021",
-			entryText: "Today I wrote another journal",
+			title: "This is an example Journal",
+			date: "1/1/0001",
+			entryText: "Today I wrote a journal, yay!",
 		},
 	]);
 
