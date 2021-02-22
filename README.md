@@ -1,4 +1,8 @@
-# Getting Started with Create React App
+# React Journal
+
+A Journal that locally saves on a user's browser in localstorage
+
+May add db capabilities later
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
