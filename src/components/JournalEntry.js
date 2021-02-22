@@ -1,5 +1,5 @@
 import { Container } from "@material-ui/core";
-import React, { useState } from "react";
+import React from "react";
 
 export const JournalEntry = ({ entry }) => {
 	const title = entry.title;
