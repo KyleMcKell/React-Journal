@@ -1,11 +1,12 @@
 import { Container } from "@material-ui/core";
-import React, { useState } from "react";
+import React from "react";
 import { JournalEntry } from "./JournalEntry";
 import { JournalCreate } from "./JournalCreate";
 import { v4 as uuidv4 } from "uuid";
+import { useLocalStorageState } from "../utils/useLocalStorageState";
 
 export const Journal = () => {
-	const [entries, setEntries] = useState([
+	const [entries, setEntries] = useLocalStorageState("journal-entries", [
 		{
 			title: "hi, this is a title",
 			date: "January 1 2021",
