@@ -1,3 +1,4 @@
+import { Container } from "@material-ui/core";
 import React, { useState } from "react";
 
 export const JournalEntry = ({ entry }) => {
@@ -6,10 +7,10 @@ export const JournalEntry = ({ entry }) => {
 	const text = entry.text;
 
 	return (
-		<div>
+		<Container>
 			<h1>{title}</h1>
 			<h2>{date}</h2>
 			<p>{text}</p>
-		</div>
+		</Container>
 	);
 };

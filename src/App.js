@@ -1,7 +1,9 @@
+import { Journal } from "./components/Journal";
+
 function App() {
 	return (
 		<div className="App">
-			<h1>hi</h1>
+			<Journal />
 		</div>
 	);
 }
