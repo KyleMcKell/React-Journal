@@ -1,10 +1,10 @@
 import React from "react";
 import { Button } from "@material-ui/core";
 
-export const JournalDelete = () => {
+export const JournalDelete = ({ handleDelete }) => {
 	return (
 		<div>
-			<Button>Delete Journal</Button>
+			<Button onClick={handleDelete}>Delete Journal</Button>
 		</div>
 	);
 };

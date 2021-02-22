@@ -1,7 +1,8 @@
 import { Container } from "@material-ui/core";
 import React from "react";
+import { JournalDelete } from "./JournalDelete";
 
-export const JournalEntry = ({ entry }) => {
+export const JournalEntry = ({ entry, handleDelete }) => {
 	const title = entry.title;
 	const date = entry.date;
 	const entryText = entry.entryText;
@@ -11,6 +12,7 @@ export const JournalEntry = ({ entry }) => {
 			<h1>{title}</h1>
 			<h2>{date}</h2>
 			<p>{entryText}</p>
+			<JournalDelete handleDelete={handleDelete} />
 		</Container>
 	);
 };
