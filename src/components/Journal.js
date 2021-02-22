@@ -20,12 +20,13 @@ export const Journal = () => {
 
 	const handleSubmit = (event) => {
 		event.preventDefault();
+		console.log(event);
 		const newTitle = event.target.elements.title.value;
 		const newEntryText = event.target.elements.entryText.value;
 		const newEntry = {
 			title: newTitle,
 			date: "Date Date Date", //todo add date capabilities
-			entry: newEntryText,
+			entryText: newEntryText,
 		};
 		setEntries([...entries, newEntry]);
 	};
