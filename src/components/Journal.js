@@ -33,6 +33,7 @@ export const Journal = () => {
 
 	return (
 		<div>
+			<JournalCreate handleSubmit={handleSubmitCreate} />
 			<Container>
 				{entries.map((entry) => {
 					return (
@@ -44,7 +45,6 @@ export const Journal = () => {
 					);
 				})}
 			</Container>
-			<JournalCreate handleSubmit={handleSubmitCreate} />
 		</div>
 	);
 };

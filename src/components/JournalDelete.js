@@ -4,7 +4,13 @@ import { Button } from "@material-ui/core";
 export const JournalDelete = ({ handleDelete, entryKey }) => {
 	return (
 		<div>
-			<Button onClick={() => handleDelete(entryKey)}>Delete Journal</Button>
+			<Button
+				variant="contained"
+				color="secondary"
+				onClick={() => handleDelete(entryKey)}
+			>
+				Delete Journal
+			</Button>
 		</div>
 	);
 };
