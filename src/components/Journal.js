@@ -24,7 +24,7 @@ export const Journal = () => {
 				date: dateFormatter(),
 				entryText: newEntryText,
 			};
-			setEntries([...entries, newEntry]);
+			setEntries([newEntry, ...entries]);
 		}
 	};
 
@@ -33,7 +33,7 @@ export const Journal = () => {
 	};
 
 	return (
-		<div>
+		<div className="flex flex-col mx-auto items-center justify-center h-auto w-3/4">
 			<JournalCreate handleSubmit={handleSubmitCreate} />
 			<div>
 				{entries.map((entry) => {

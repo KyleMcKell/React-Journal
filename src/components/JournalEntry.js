@@ -8,8 +8,8 @@ export const JournalEntry = ({ entry, handleDelete }) => {
 
 	return (
 		<div>
-			<h1>{title}</h1>
-			<h2>{date}</h2>
+			<h2>{title}</h2>
+			<h3>{date}</h3>
 			<p>{entryText}</p>
 			<JournalDelete handleDelete={() => handleDelete(entry)} />
 		</div>

@@ -1,8 +1,10 @@
 import { Journal } from "./components/Journal";
+import { Title } from "./components/Title";
 
 function App() {
 	return (
-		<div className="App">
+		<div className="flex flex-col w-screen min-h-screen w-full bg-gray-700">
+			<Title />
 			<Journal />
 		</div>
 	);
