@@ -1,7 +1,7 @@
 import React from "react";
+import { v4 as uuidv4 } from "uuid";
 import { JournalEntry } from "./JournalEntry";
 import { JournalCreate } from "./JournalCreate";
-import { v4 as uuidv4 } from "uuid";
 import { useLocalStorageState } from "../utils/useLocalStorageState";
 import { dateFormatter } from "../utils/dateFormatter";
 
@@ -18,12 +18,14 @@ export const Journal = () => {
 		event.preventDefault();
 		const newTitle = event.target.elements.title.value;
 		const newEntryText = event.target.elements.entryText.value;
-		const newEntry = {
-			title: newTitle,
-			date: dateFormatter(),
-			entryText: newEntryText,
-		};
-		setEntries([newEntry, ...entries]);
+		if (newTitle && newEntryText) {
+			const newEntry = {
+				title: newTitle,
+				date: dateFormatter(),
+				entryText: newEntryText,
+			};
+			setEntries([...entries, newEntry]);
+		}
 	};
 
 	const handleDelete = (entry) => {
