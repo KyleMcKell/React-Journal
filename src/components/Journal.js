@@ -33,9 +33,9 @@ export const Journal = () => {
 	};
 
 	return (
-		<div className="flex flex-col mx-auto items-center justify-center h-auto w-3/4">
+		<div className="flex flex-col items-center justify-center h-auto w-full">
 			<JournalCreate handleSubmit={handleSubmitCreate} />
-			<div>
+			<div className="flex flex-col items-center w-full">
 				{entries.map((entry) => {
 					return (
 						<JournalEntry
