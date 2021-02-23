@@ -18,6 +18,8 @@ export const Journal = () => {
 		event.preventDefault();
 		const newTitle = event.target.elements.title.value;
 		const newEntryText = event.target.elements.entryText.value;
+		event.target.elements.title.value = null;
+		event.target.elements.entryText.value = null;
 		if (newTitle && newEntryText) {
 			const newEntry = {
 				title: newTitle,
