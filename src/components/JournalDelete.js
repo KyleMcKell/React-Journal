@@ -1,16 +1,15 @@
 import React from "react";
-import { Button } from "@material-ui/core";
 
 export const JournalDelete = ({ handleDelete, entryKey }) => {
 	return (
 		<div>
-			<Button
+			<button
 				variant="contained"
 				color="secondary"
 				onClick={() => handleDelete(entryKey)}
 			>
 				Delete Journal
-			</Button>
+			</button>
 		</div>
 	);
 };

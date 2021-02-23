@@ -1,8 +1,7 @@
-import { Container } from "@material-ui/core";
 import React from "react";
+import { v4 as uuidv4 } from "uuid";
 import { JournalEntry } from "./JournalEntry";
 import { JournalCreate } from "./JournalCreate";
-import { v4 as uuidv4 } from "uuid";
 import { useLocalStorageState } from "../utils/useLocalStorageState";
 import { dateFormatter } from "../utils/dateFormatter";
 
@@ -34,7 +33,7 @@ export const Journal = () => {
 	return (
 		<div>
 			<JournalCreate handleSubmit={handleSubmitCreate} />
-			<Container>
+			<div>
 				{entries.map((entry) => {
 					return (
 						<JournalEntry
@@ -44,7 +43,7 @@ export const Journal = () => {
 						/>
 					);
 				})}
-			</Container>
+			</div>
 		</div>
 	);
 };

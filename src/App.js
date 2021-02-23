@@ -1,11 +1,10 @@
-import { Container } from "@material-ui/core";
 import { Journal } from "./components/Journal";
 
 function App() {
 	return (
-		<Container className="App">
+		<div className="App">
 			<Journal />
-		</Container>
+		</div>
 	);
 }
 

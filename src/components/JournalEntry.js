@@ -1,4 +1,3 @@
-import { Container } from "@material-ui/core";
 import React from "react";
 import { JournalDelete } from "./JournalDelete";
 
@@ -8,11 +7,11 @@ export const JournalEntry = ({ entry, handleDelete }) => {
 	const entryText = entry.entryText;
 
 	return (
-		<Container>
+		<div>
 			<h1>{title}</h1>
 			<h2>{date}</h2>
 			<p>{entryText}</p>
 			<JournalDelete handleDelete={() => handleDelete(entry)} />
-		</Container>
+		</div>
 	);
 };
