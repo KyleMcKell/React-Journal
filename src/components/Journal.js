@@ -1,4 +1,3 @@
-import { Container } from "@material-ui/core";
 import React from "react";
 import { JournalEntry } from "./JournalEntry";
 import { JournalCreate } from "./JournalCreate";
@@ -24,7 +23,7 @@ export const Journal = () => {
 			date: dateFormatter(),
 			entryText: newEntryText,
 		};
-		setEntries([...entries, newEntry]);
+		setEntries([newEntry, ...entries]);
 	};
 
 	const handleDelete = (entry) => {
@@ -33,7 +32,8 @@ export const Journal = () => {
 
 	return (
 		<div>
-			<Container>
+			<JournalCreate handleSubmit={handleSubmitCreate} />
+			<div>
 				{entries.map((entry) => {
 					return (
 						<JournalEntry
@@ -43,8 +43,7 @@ export const Journal = () => {
 						/>
 					);
 				})}
-			</Container>
-			<JournalCreate handleSubmit={handleSubmitCreate} />
+			</div>
 		</div>
 	);
 };
