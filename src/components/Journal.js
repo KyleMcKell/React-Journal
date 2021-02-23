@@ -18,12 +18,14 @@ export const Journal = () => {
 		event.preventDefault();
 		const newTitle = event.target.elements.title.value;
 		const newEntryText = event.target.elements.entryText.value;
-		const newEntry = {
-			title: newTitle,
-			date: dateFormatter(),
-			entryText: newEntryText,
-		};
-		setEntries([...entries, newEntry]);
+		if (newTitle && newEntryText) {
+			const newEntry = {
+				title: newTitle,
+				date: dateFormatter(),
+				entryText: newEntryText,
+			};
+			setEntries([...entries, newEntry]);
+		}
 	};
 
 	const handleDelete = (entry) => {
