@@ -4,12 +4,13 @@ import { JournalEntry } from "./JournalEntry";
 import { JournalCreate } from "./JournalCreate";
 import { v4 as uuidv4 } from "uuid";
 import { useLocalStorageState } from "../utils/useLocalStorageState";
+import { dateFormatter } from "../utils/dateFormatter";
 
 export const Journal = () => {
 	const [entries, setEntries] = useLocalStorageState("journal-entries", [
 		{
 			title: "This is an example Journal",
-			date: "1/1/0001",
+			date: dateFormatter(),
 			entryText: "Today I wrote a journal, yay!",
 		},
 	]);
@@ -20,7 +21,7 @@ export const Journal = () => {
 		const newEntryText = event.target.elements.entryText.value;
 		const newEntry = {
 			title: newTitle,
-			date: "Date Date Date", //todo add date capabilities
+			date: dateFormatter(),
 			entryText: newEntryText,
 		};
 		setEntries([...entries, newEntry]);
