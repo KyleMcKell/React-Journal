@@ -19,7 +19,7 @@ export const JournalEntry = ({ entry, handleDelete }) => {
 					<JournalDelete handleDelete={() => handleDelete(entry)} />
 				</div>
 			</div>
-			<div className="rounded-xl bg-gray-200 w-2/3 p-4">
+			<div className="rounded-xl bg-gray-200 w-2/3 p-4 ml-4">
 				<p>{entryText}</p>
 			</div>
 			<div></div>
