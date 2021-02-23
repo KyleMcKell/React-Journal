@@ -29,7 +29,7 @@ export const JournalCreate = ({ handleSubmit }) => {
 					className="bg-green-700 text-gray-100 p-2 rounded m-2"
 					type="submit"
 				>
-					Submit
+					Add Journal
 				</button>
 			</div>
 		</form>
